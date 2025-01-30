@@ -32,7 +32,7 @@ async function build() {
                 
                 // Replace template placeholders
                 const page = template
-                    .replace('{{title}}', attributes.title || 'Untitled')
+                    .replace('{{title}}', attributes.title || 'Build your own apps with AI')
                     .replace('{{content}}', html);
                 
                 // Generate output path
