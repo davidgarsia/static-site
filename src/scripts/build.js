@@ -36,13 +36,13 @@ async function build() {
                     .replace('{{content}}', html)
                     .replace('{{nav}}', `
                         <nav>
-                            <ul>
-                                <li><a href="/index.html">Home</a></li>
-                                <li><a href="/blog.html">Blog</a></li>
-                                <li><a href="/about.html">About</a></li>
-                                <li><a href="/faq.html">FAQ</a></li>
-                                <li><a href="/contact.html">Contact</a></li>
-                            </ul>
+                            <div class="nav-links">
+                                <a href="/index.html">Home</a>
+                                <a href="/blog.html">Blog</a>
+                                <a href="/about.html">About</a>
+                                <a href="/faq.html">FAQ</a>
+                                <a href="/contact.html">Contact</a>
+                            </div>
                         </nav>
                     `);
                 
