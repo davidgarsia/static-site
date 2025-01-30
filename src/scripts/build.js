@@ -33,7 +33,18 @@ async function build() {
                 // Replace template placeholders
                 const page = template
                     .replace('{{title}}', attributes.title || 'Default Title')
-                    .replace('{{content}}', html);
+                    .replace('{{content}}', html)
+                    .replace('{{nav}}', `
+                        <nav>
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/blog.html">Blog</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/faq.html">FAQ</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    `);
                 
                 // Generate output path
                 const outFile = path.join('dist', file.replace('.md', '.html'));
